@@ -36,3 +36,9 @@ n*n মাত্রার একটি ম্যাট্রিক্স ```Ao``
 ![ezgif com-gif-maker (3)](https://user-images.githubusercontent.com/27882232/214536897-d25cd250-a75a-4b0e-b936-59fd96bfca18.jpg)
 
 ৪। একইভাবে A3 এবং A4 ও তৈরি হয়।
+
+![ezgif com-gif-maker (4)](https://user-images.githubusercontent.com/27882232/214537376-9602deb3-c8fe-4066-9803-6ede53561d68.jpg)
+
+A4 প্রতিটি জোড়া শীর্ষবিন্দুর মধ্যে সবচেয়ে ছোট পথ দেয়।
+![ezgif com-gif-maker (5)](https://user-images.githubusercontent.com/27882232/214537528-f5f572d6-7a55-4e6a-b879-11d55a321548.jpg)
+
