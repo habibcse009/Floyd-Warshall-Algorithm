@@ -50,3 +50,116 @@ for k = 1 to n
             Ak[i, j] = min (Ak-1[i, j], Ak-1[i, k] + Ak-1[k, j])
 return A
 ```
+***
+### A java code program that implements the Floyd-Warshall algorithm to find the shortest paths between all pairs of vertices in a weighted, directed graph
+
+```
+import java.util.Scanner;
+
+public class FloydWarshall {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the number of vertices:");
+        int n = scanner.nextInt();
+        System.out.println("Enter the number of edges:");
+        int e = scanner.nextInt();
+        int[][] p = new int[10][10];
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                p[i][j] = 999;
+            }
+        }
+
+        for (int i = 1; i <= e; i++) {
+            System.out.println("Enter the end vertices of edge" + i + " with its weight");
+            int u = scanner.nextInt();
+            int v = scanner.nextInt();
+            int w = scanner.nextInt();
+            p[u][v] = w;
+        }
+
+        System.out.println("Matrix of input data:");
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                System.out.print(p[i][j] + "\t");
+            }
+            System.out.println();
+        }
+
+        floyds(p, n);
+
+        System.out.println("Transitive closure:");
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                System.out.print(p[i][j] + "\t");
+            }
+            System.out.println();
+        }
+
+        System.out.println("The shortest paths are:");
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                if (i != j) {
+                    System.out.println("<" + i + "," + j + ">=" + p[i][j]);
+                }
+            }
+        }
+    }
+
+    public static void floyds(int[][] p, int n) {
+        for (int k = 1; k <= n; k++) {
+            for (int i = 1; i <= n; i++) {
+                for (int j = 1; j <= n; j++) {
+                    if (i == j) {
+                        p[i][j] = 0;
+                    } else {
+                        p[i][j] = Math.min(p[i][j], p[i][k] + p[k][j]);
+                    }
+                }
+            }
+        }
+    }
+}
+
+```
+
+#### Output: 
+```
+Enter the number of vertices:
+3
+Enter the number of edges:
+4
+Enter the end vertices of edge1 with its weight
+5
+4
+5
+Enter the end vertices of edge2 with its weight
+2
+3
+4
+Enter the end vertices of edge3 with its weight
+5
+5
+6
+Enter the end vertices of edge4 with its weight
+4
+5
+6
+Matrix of input data:
+999	999	999	
+999	999	4	
+999	999	999	
+Transitive closure:
+0	999	999	
+999	0	4	
+999	999	0	
+The shortest paths are:
+<1,2>=999
+<1,3>=999
+<2,1>=999
+<2,3>=4
+<3,1>=999
+<3,2>=999
+
+```
