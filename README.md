@@ -163,3 +163,16 @@ The shortest paths are:
 <3,2>=999
 
 ```
+
+#### Floyd Warshall Algorithm Complexity
+Time Complexity
+There are three loops. Each loop has constant complexities. So, the time complexity of the Floyd-Warshall algorithm is O(n3).
+
+Space Complexity
+The space complexity of the Floyd-Warshall algorithm is O(n2).
+
+#### Floyd Warshall Algorithm Applications
+To find the shortest path is a directed graph
+To find the transitive closure of directed graphs
+To find the Inversion of real matrices
+For testing whether an undirected graph is bipartite
