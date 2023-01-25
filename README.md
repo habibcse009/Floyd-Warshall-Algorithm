@@ -166,13 +166,13 @@ The shortest paths are:
 
 #### Floyd Warshall Algorithm Complexity
 Time Complexity
-There are three loops. Each loop has constant complexities. So, the time complexity of the Floyd-Warshall algorithm is O(n3).
+সময় জটিলতা তিনটি লুপ আছে. প্রতিটি লুপ ধ্রুবক জটিলতা আছে. সুতরাং, ফ্লয়েড-ওয়ারশাল অ্যালগরিদমের সময় জটিলতা হল O(n3)।
 
 Space Complexity
-The space complexity of the Floyd-Warshall algorithm is O(n2).
+ফ্লয়েড-ওয়ারশাল অ্যালগরিদমের স্থান জটিলতা হল O(n2)।
 
 #### Floyd Warshall Algorithm Applications
-To find the shortest path is a directed graph
-To find the transitive closure of directed graphs
-To find the Inversion of real matrices
-For testing whether an undirected graph is bipartite
+*সংক্ষিপ্ততম পথ খুঁজে পেতে একটি নির্দেশিত গ্রাফ
+*নির্দেশিত গ্রাফের ট্রানজিটিভ ক্লোজার খুঁজে বের করতে
+*বাস্তব ম্যাট্রিক্সের ইনভার্সন খুঁজে বের করতে
+*একটি অনির্দেশিত গ্রাফ দ্বিপক্ষীয় কিনা তা পরীক্ষার জন্য
