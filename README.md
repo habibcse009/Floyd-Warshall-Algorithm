@@ -41,4 +41,12 @@ n*n মাত্রার একটি ম্যাট্রিক্স ```Ao``
 
 A4 প্রতিটি জোড়া শীর্ষবিন্দুর মধ্যে সবচেয়ে ছোট পথ দেয়।
 ![ezgif com-gif-maker (5)](https://user-images.githubusercontent.com/27882232/214537528-f5f572d6-7a55-4e6a-b879-11d55a321548.jpg)
-
+```
+n = no of vertices
+A = matrix of dimension n*n
+for k = 1 to n
+    for i = 1 to n
+        for j = 1 to n
+            Ak[i, j] = min (Ak-1[i, j], Ak-1[i, k] + Ak-1[k, j])
+return A
+```
